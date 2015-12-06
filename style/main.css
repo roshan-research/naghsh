@@ -1,0 +1,155 @@
+@font-face {
+  font-family: IRMitra;
+  font-weight: normal;
+  src: url('http://www.sobhe.ir/style/IRMitra.woff') format('woff');
+}
+@font-face {
+  font-family: BMitra;
+  font-weight: normal;
+  src: url('http://www.sobhe.ir/style/BMitra.woff') format('woff');
+}
+
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+	height: 80%;
+	direction: rtl;
+	background: #f5f5f5;
+}
+.glyphicon {
+	top: 4px;
+	margin-left: 3px;
+}
+
+.container {
+	max-width: 850px;
+}
+
+body, p {
+	font-family: IRMitra;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+p {
+	text-align: justify;
+}
+
+h1 {
+	font-size: 60px;
+}
+h2 {
+	font-size: 35px;
+	margin: 30px 0 15px;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+.header {
+	margin-bottom: 70px;
+}
+
+.row {
+	margin: 20px 0 30px;
+}
+.thumbnail {
+	text-align: center;
+}
+
+.modal-dialog {
+	width: 360px;
+}
+
+p > a {
+	padding: 0 2px;
+}
+
+/* images */
+.col-md-4 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#images > div a {
+	position: relative;
+}
+#images img {
+	margin-bottom: 10px;
+	box-shadow: 00px 0px 5px #999;
+}
+.img-thumbnail {
+	border: none;
+	padding: 0;
+}
+#images .label {
+	font-family: BMitra;
+	position: absolute;
+	left: 5px;
+  bottom: 10px;
+	padding: 5px 7px 3px;
+	background-color: rgba(0, 0, 0, 0.75);
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#modal ul {
+	position: absolute;
+	top: 40px;
+	padding-right: 20px;
+}
+#modal li {
+	list-style: none;
+	width: 100%;
+}
+#modal li span {
+	font-family: BMitra;
+	padding: 5px 10px 3px;
+	background: rgba(0, 0, 0, 0.80);
+	color: #fff;
+}
+button.close {
+	position: absolute;
+	left: 18px;
+	top: 20px;
+	font-size: 30px;
+	color: #fff !important;
+	opacity: .4;
+	line-height: 0.2;
+}
+
+.well {
+	background-color: #fff;
+}
+select.form-control {
+	border: none;
+	background-color: #f5f5f5;
+}
+select.form-control {
+	font-size: 17px;
+	padding: 3px 12px;
+}
+
+/* footer */
+
+html, body {
+	height: 100%;
+}
+.wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -60px;
+}
+.footer, .push {
+	height: 60px;
+}
+.footer hr {
+	border-color: #ccc;
+	margin: 15px 0 5px;
+}
+.footer p {
+	font-size: 90%;
+}

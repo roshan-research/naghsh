@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>نقش</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="style/main.css" type="text/css" />
+</head>
+<body>
+<div class="wrap">
+<div class="container">
+	<div class="well" style="margin-top: 10px">
+		<p style="margin: 0">تصاویر زیر، از سایت «لنزور» آمده‌اند و «نقش» آنها را در این گروه‌ها قرار داده است: <select id="labels" class="form-control" style="display: inline-block; width: 200px; margin-right: 5px"></select></p>
+	</div>
+	<div id="images"></div>
+</div>
+
+<div class="push"></div>
+</div>
+
+<div class="footer">
+	<div class="container">
+		<hr>
+		<p class="pull-right">این همه <a href="http://www.sobhe.ir/naghsh">نقش</a> عجب بر در و دیوار وجود</p>
+		<p class="pull-left">کاری از <a href="http://www.sobhe.ir/">سُبحه</a></p>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://parde-browser.herokuapp.com/static/inject.js"></script>
+
+
+<div id="modal" class="modal fade">
+<div class="modal-dialog">
+<div class="modal-content">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+	<div class="image">
+		<ul></ul>
+		<img class="img-thumbnail" src="">
+	</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+	var labels = {}, images = {};
+	var select = $('#labels');
+
+	var showImages = function(label) {
+		$('#images').empty();
+		var i = 0;
+		$.each(labels[label], function(src, items){
+			i += 1;
+			if (i%4 == 0)
+				$('#images').append('<div class="clearfix"></div>');
+			$('#images').append('<div class="col-md-4 col-xs-6"><a href="#"><img class="img-thumbnail" src="'+ src +'"></a><span class="label">%'+ Math.round(items[label]*100) +'</span></div>');
+		})
+	};
+
+	$('#images').on('click', 'img', function(){
+		modal = $('#modal');
+		modal.find('img').attr('src', this.src);
+		modal.find('ul').empty();
+		$.each(images[this.src], function(label, probability) {
+			modal.find('ul').append('<li><span>'+ label +': '+ Math.round(probability*100) +'%</span></li>');
+		})
+		modal.modal('show');
+		return false;
+	});
+
+	$.get('labels.json', function(data) {
+		labels = data;
+
+		$.each(labels, function(label, labelImages) {
+			select.append($('<option />', {value: label, text: label}));
+
+			$.each(labelImages, function(src, items) { images[src] = items; });
+		});
+
+		select.change(function() { showImages($(this).val()); });
+		select.change();
+	});
+});
+</script>
+
+<script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" "); for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]); mixpanel.init("b208ae76bcf2f1ba9ee618aebd149d9c");</script>
+<script type="text/javascript">
+	mixpanel.track('Naghsh Labels');
+</script>
+</body>
+</html>
