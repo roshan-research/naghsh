@@ -49,7 +49,7 @@
 			items += '<li><span>'+ label +': '+ Math.round(probability*100) +'%</span></li>';
 		});
 		
-		$('#images').append('<div class="col-md-6 col-xs-12"><div class="image"><ul>'+ items +'</ul><img class="img-thumbnail" src="'+ src +'"></div>');
+		$('#images').append('<div class="col-sm-6 col-xs-12"><div class="image"><ul>'+ items +'</ul><img class="img-thumbnail" src="'+ src +'"></div>');
 	};
 	
 	$.get('samples.json', function(data) {

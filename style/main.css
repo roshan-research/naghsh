@@ -73,6 +73,9 @@ p > a {
 	padding-left: 5px;
 	padding-right: 5px;
 }
+#images {
+	margin: 40px 0;
+}
 #images > div a {
 	position: relative;
 }
