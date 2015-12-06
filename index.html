@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+	<meta charset="utf-8" />
+	<title>نقش</title>
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="style/main.css" type="text/css" />
+</head>
+<body>
+<div class="wrap">
+<div class="container">
+	<div class="text-center header">
+		<h1>نقش</h1>
+		<p class="text-center">تشخیص اشیاء و صحنه‌ها در تصویر</p>
+	</div>
+		
+	<p>«نقش» می‌گوید که در تصویر چه می‌بیند. یعنی از میان اشیاء و صحنه‌هایی که می‌شناسد، در مورد تصویر نظر می‌دهد. این کار با استفاده از فناوری روز دنیا یعنی <a href="http://en.wikipedia.org/wiki/Deep_learning">یادگیری عمیق</a> انجام می‌شود. نمونه‌ای از نظرهای نقش را در این تصاویر می‌بینید:</p>
+		
+	<div id="images" class="row"></div>
+
+	<p>«نقش» می‌تواند حضور هر چیزی را در تصویر بیاموزد و فعلا حدود <span>۴۰۰ شئ و صحنه</span> را می‌شناسد. می‌توانید نگاهی به تصاویر سایت «لنزور» بیاندازید که توسط نقش پردازش شده‌اند:</p>
+	
+	<div class="row">
+		<div class="col-xs-6 col-xs-offset-3">
+			<a class="thumbnail" href="images.html"><span class="glyphicon glyphicon-search"></span> چیزهایی که «نقش» آنها را می‌شناسد</a>
+		</div>
+	</div>
+
+	<p style="margin-bottom: 30px">اگر فکر می‌کنید، این ابزار به کار شما هم می‌آید، <a href="mailto:naghsh@sobhe.ir">تماس بگیرید</a>.</p>
+</div>
+	
+<div class="push"></div>
+</div>
+
+<div class="footer">
+	<div class="container">
+		<hr>
+		<p class="pull-right">این همه <a href="http://www.sobhe.ir/naghsh">نقش</a> عجب بر در و دیوار وجود</p>
+		<p class="pull-left">کاری از <a href="http://www.sobhe.ir/">سُبحه</a></p>
+	</div>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript">
+	var addImage = function(src, labels) {		
+		items = '';
+		$.each(labels, function(label, probability) {
+			items += '<li><span>'+ label +': '+ Math.round(probability*100) +'%</span></li>';
+		});
+		
+		$('#images').append('<div class="col-md-6 col-xs-12"><div class="image"><ul>'+ items +'</ul><img class="img-thumbnail" src="'+ src +'"></div>');
+	};
+	
+	$.get('samples.json', function(data) {
+		urls = Object.keys(data).sort(function() {return .5 - Math.random();});
+		$.each(urls.slice(0, 2), function(i, url) {
+			addImage(url, data[url]);
+		});
+	});
+</script>
+	
+<script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" "); for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]); mixpanel.init("b208ae76bcf2f1ba9ee618aebd149d9c");</script>
+<script type="text/javascript">
+	mixpanel.track('Naghsh');
+</script>
+</body>
+</html>

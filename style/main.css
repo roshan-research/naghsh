@@ -95,16 +95,19 @@ p > a {
   border-bottom-right-radius: 0;
 }
 
-#modal ul {
+.image {
+	position: relative;
+}
+.image ul {
 	position: absolute;
 	top: 40px;
 	padding-right: 20px;
 }
-#modal li {
+.image li {
 	list-style: none;
 	width: 100%;
 }
-#modal li span {
+.image li span {
 	font-family: BMitra;
 	padding: 5px 10px 3px;
 	background: rgba(0, 0, 0, 0.80);
