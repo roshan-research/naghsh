@@ -1,37 +1,41 @@
 {
-	"http://www.lenzor.com/public/public/user_data/photo/11421/11420004-7a140eaabbb9ecc086e166c29cbbbac1-l.jpg": {
-   "درخت": 0.68, 
-   "تفنگ": 0.43, 
-   "باغ": 0.16, 
-   "لباس نظامی": 0.12
+  "http://hw8.asset.lenzor.com/lp/13490546-6119-l.jpg": {
+   "نیمکت پارک": 1.0, 
+   "باغ": 0.18, 
+   "زمین بازی": 0.12
   }, 
-  "http://www.lenzor.com/public/public/user_data/photo/11619/11618623-fae442924787982385ef1c1b36a4901c-l.jpg": {
-   "ساحل": 0.92, 
-   "اقیانوس": 0.33, 
-   "آسمان": 0.26
+  "http://www.lenzor.com/public/public/user_data/photo/12294/12293161-8379c6bb43232841a6468d492d15a5ca-l.jpg": {
+   "پروانه": 0.99, 
+   "جنگل": 0.17
   }, 
-  "http://www.lenzor.com/public/public/user_data/photo/11750/11749107-4e565114e2d7814f999b236e9d041dc5-l.jpg": {
-   "بزرگراه": 0.92, 
-   "تابلو خیابان": 0.4
+  "http://hw10.asset.lenzor.com/lp/11056200-1832-l.jpg": {
+   "قو": 0.99, 
+   "تالاب": 0.26
   }, 
-  "http://hw8.asset.lenzor.com/lp/12337891-2588-l.jpg": {
-   "ساعت عقربه‌دار": 0.76
+  "http://www.lenzor.com/public/public/user_data/photo/11941/11940094-a757403bc92da8826bf9543442c6ad8a-l.jpg": {
+   "قوری": 0.99
+  }, 
+  "http://www.lenzor.com/public/public/user_data/photo/11430/11429990-c55400ac53365949c3fa88f92eeb5024-l.jpg": {
+   "لوکوموتیو بخار": 0.95, 
+   "آسمان": 0.18, 
+   "قطار": 0.16, 
+   "راه آهن": 0.1
   },
-  "http://www.lenzor.com/public/public/user_data/photo/11496/11495654-ea85f1e01a9dd78ea6ec13551ace5f85-l.jpg": {
-   "سبد": 0.77, 
-   "باغ": 0.22
+  "http://hw10.asset.lenzor.com/lp/11100844-3920-l.jpg": {
+   "نهنگ": 0.99
+  }, 
+  "http://www.lenzor.com/public/public/user_data/photo/13268/13267627-a13d10626ce70e08d3762424362950b1-l.jpg": {
+   "نارنگی": 0.99
   },
-  "http://www.lenzor.com/public/public/user_data/photo/12062/12061817-67b87d41c65f3cd76467998911463a76-l.jpg": {
-   "شالی‌کاری": 0.97
+  "http://www.lenzor.com/public/public/user_data/photo/12570/12569786-b552ac335150d5dd2bd042e3e87be480-l.jpg": {
+   "چتر": 1.0, 
+   "کوچه": 0.99
   }, 
-  "http://www.lenzor.com/public/public/user_data/photo/12114/12113095-d09a986dc1f0e9222fb61ecb9a5ec04d-l.jpg": {
-   "بستنی": 0.96
-  }, 
-  "http://www.lenzor.com/public/public/user_data/photo/11120/11119089-71f117ae5ee600ca0bef03eb8d87fd9e-l.jpg": {
-   "فرغون": 1.0, 
-   "باغ": 0.31
-  }, 
-  "http://www.lenzor.com/public/public/user_data/photo/12153/12152210-04d4df9681ede76cdd6249acd1dadcbf-l.jpg": {
-   "فواره": 0.99
+  "http://www.lenzor.com/public/public/user_data/photo/12945/12944572-e058184b2ab90fcddc5058b66249ef8c-l.jpg": {
+   "کافه": 0.94, 
+   "اسپرسو": 0.87
+  },
+  "http://www.lenzor.com/public/public/user_data/photo/13421/13420501-ea727c40f782cc29dd88dcae63d6401b-l.jpg": {
+   "پیتزا": 0.99
   }
 }
